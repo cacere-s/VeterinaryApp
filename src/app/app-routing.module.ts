@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./registro-mascotas/registro-mascotas.module').then(m => m.RegistroMascotasPageModule)
   },
   {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
+  },
+  { 
     path: 'ingreso',
     loadChildren: () => import('./ingreso/ingreso.module').then(m => m.IngresoModule)
   }
@@ -28,3 +32,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
