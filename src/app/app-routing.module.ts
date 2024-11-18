@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'registro-mascotas',
     loadChildren: () => import('./registro-mascotas/registro-mascotas.module').then(m => m.RegistroMascotasPageModule)
+  },
+  {
+    path: 'ingreso',
+    loadChildren: () => import('./ingreso/ingreso.module').then(m => m.IngresoModule)
   }
 ];
 
