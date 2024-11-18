@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cuidado de Mascotas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Cuida la salud de tu mascota</h2>
+      <p>Consejos y trucos para tu mascota</p>
+    </div>
+    <ion-button fill="clear" color="light" class="banner-button">
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <!-- Categorías -->
+  <div class="categories">
+    <h3>Categoría</h3>
+    <div class="category-list">
+      <ion-button class="category-button" color="primary">
+        <ion-icon name="fitness-outline" title="Salud"></ion-icon>
+        <ion-icon src="assets/icon/fitness-outline.svg"></ion-icon>
+         Salud
+      </ion-button>
+      <ion-button class="category-button" color="secondary">
+        <ion-icon name="paw-outline"></ion-icon>
+        <ion-icon src="assets/icon/paw-outline.svg"></ion-icon>
+        Mis Mascotas
+      </ion-button>
+      <ion-button class="category-button" color="tertiary">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        <ion-icon src="assets/icon/calendar-number-outline.svg"></ion-icon>
+        Citas 
+      </ion-button>
+      <ion-button class="category-button" color="success">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-icon src="assets/icon/person-outline.svg"></ion-icon>
+        Veterinarios
+      </ion-button>
+      <ion-button class="category-button" color="warning">
+        <ion-icon name="fitness-outline"></ion-icon>
+        <ion-icon src="assets/icon/receipt-outline.svg"></ion-icon>
+         Consejos
+      </ion-button>
+    </div>
+  </div>
+
+  <!-- Búsqueda -->
+  <ion-searchbar placeholder="Buscar"></ion-searchbar>
+
+  <!-- Sección de Veterinarios -->
+  <div class="veterinary">
+    <h3>Veterinarios</h3>
+    <div class="vet-list">
+      <div class="vet-card" *ngFor="let vet of vets">
+        <img [src]="vet.image" alt="Foto del Veterinario" class="vet-image" />
+        <h4>{{ vet.name }}</h4>
+        <p>{{ vet.speciality }}</p>
+        <div class="vet-info">
+          <ion-icon name="star"></ion-icon>
+          <span>{{ vet.rating }}</span>
+          <ion-icon name="location-outline"></ion-icon>
+          <span>{{ vet.distance }} km</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
