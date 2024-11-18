@@ -1,0 +1,20 @@
+<ion-content>
+  <!-- Fondo decorativo -->
+  <div class="background">
+    <img src="assets/imagenes/fondo.png" alt="fondo" />
+  </div>
+
+  <!-- Cuadro de Login -->
+  <div class="login-container">
+    <ion-button expand="block" class="primary-button" routerLink="/perfil">Iniciar sesión</ion-button>
+
+    <ion-button expand="block" fill="outline" class="google-button">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Iniciar sesión con Google
+    </ion-button>
+
+    <p class="sign-in-text">
+      ¿No tienes una cuenta? <a routerLink="/register">Regístrate</a>
+    </p>
+  </div>
+</ion-content>
