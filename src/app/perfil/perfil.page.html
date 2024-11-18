@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil de la Mascota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="assets/imagenes/perfildemascotas.jpg" alt="Foto de la Mascota" />
+    <ion-card-header>
+      <ion-card-title>{{ mascota.name }}</ion-card-title>
+      <ion-card-subtitle>{{ mascota.raza }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Ege:</strong> {{ mascota.age }} años</p>
+      <p><strong>Gender:</strong> {{ mascota.gender }} </p>
+      <p><strong>Weight:</strong> {{ mascota.weight }} kg</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro de mascotas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color: #dfa1f5; color: black;">
+  <form [formGroup]="perfilForm" (ngSubmit)="saveperfil()">
+    
+    <!-- Nuevo campo: Foto -->
+    <ion-item [style.border-color]="perfilForm.controls['photo'].invalid ? 'red' : 'transparent'">
+      <ion-label position="floating">Foto</ion-label>
+      <ion-input type="file" formControlName="photo"></ion-input>
+    </ion-item>
+
+    <!-- Nuevo campo: Nombre de la mascota -->
+    <ion-item [style.border-color]="perfilForm.controls['petName'].invalid ? 'red' : 'transparent'">
+      <ion-label position="floating">Nombre de la Mascota</ion-label>
+      <ion-input type="text" formControlName="petName"></ion-input>
+    </ion-item>
+
+    <!-- Nuevo campo: Color de pelo -->
+    <ion-item [style.border-color]="perfilForm.controls['furColor'].invalid ? 'red' : 'transparent'">
+      <ion-label position="floating">Color de Pelo</ion-label>
+      <ion-input type="text" formControlName="furColor"></ion-input>
+    </ion-item>
+
+    <!-- Nuevo campo: edad -->
+    <ion-item [style.border-color]="perfilForm.controls['department'].invalid ? 'red' : 'transparent'">
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input type="text" formControlName="edad"></ion-input>
+    </ion-item>
+
+    <!-- Nuevo campo: Raza -->
+    <ion-item [style.border-color]="perfilForm.controls['breed'].invalid ? 'red' : 'transparent'">
+      <ion-label position="floating">Raza</ion-label>
+      <ion-input type="text" formControlName="breed"></ion-input>
+    </ion-item>
+
+    <!-- Nuevo campo: Enfermedades -->
+    <ion-item [style.border-color]="perfilForm.controls['diseases'].invalid ? 'red' : 'transparent'">
+      <ion-label position="floating">Enfermedades</ion-label>
+      <ion-input type="text" formControlName="diseases"></ion-input>
+    </ion-item>
+
+    <!-- Nuevo campo: Fecha de nacimiento -->
+    <ion-item [style.border-color]="perfilForm.controls['birthDate'].invalid ? 'red' : 'transparent'">
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-datetime formControlName="birthDate" displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY"></ion-datetime>
+    </ion-item>
+
+    <!-- Botón para guardar el perfil -->
+    <ion-button type="submit" [disabled]="perfilForm.invalid">
+      Guardar Perfil
+    </ion-button>
+
+    <!-- Botón de navegación al perfil -->
+    <button [routerLink]="['./perfil']">Perfil</button>
+
+  </form>
+</ion-content>

@@ -1,0 +1,21 @@
+/* En tu archivo .scss */
+background-color {
+  background-color: #da8ff6;
+  color: black;
+}
+
+ion-item {
+  border-color: transparent; /* Color por defecto */
+}
+
+ion-item {
+  border-color: red; /* Cuando el campo es inválido */
+}
+
+ ion-input {
+   //--background: #ffffff;  /* Cambia el color de fondo */
+   --color: #970505;          /* Cambia el color del texto */
+   --border-color: #080707; 
+  
+ }
+
