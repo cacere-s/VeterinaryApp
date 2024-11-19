@@ -7,9 +7,15 @@
   width: 100%;
   z-index: -1;
 }
-.info-card {
+.btn {
   position: absolute;
   z-index: 99;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.info-card {
+  position: absolute;
+  z-index: 90;
   bottom: 0;
   margin: 0;
   width: 100%;
