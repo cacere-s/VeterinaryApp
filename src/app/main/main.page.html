@@ -1,7 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Cuidado de Mascotas</ion-title>
+    <ion-button fill="clear" color="danger" routerLink="" slot="end">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
+  
 </ion-header>
 
 <ion-content>
@@ -20,30 +24,24 @@
   <div class="categories">
     <h3>Categoría</h3>
     <div class="category-list">
-      <ion-button class="category-button" color="primary">
-        <ion-icon name="fitness-outline" title="Salud"></ion-icon>
-        <ion-icon src="assets/icon/fitness-outline.svg"></ion-icon>
-         Salud
+      <ion-button class="category-button" color="medium" routerLink="/registro-mascotas" title="Agregar">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>            
+      <ion-button class="category-button" color="secondary" routerLink="/perfil" title="Mis Mascotas">
+        <ion-icon name="paw-outline" slot="icon-only"></ion-icon>
+  
       </ion-button>
-      <ion-button class="category-button" color="secondary">
-        <ion-icon name="paw-outline"></ion-icon>
-        <ion-icon src="assets/icon/paw-outline.svg"></ion-icon>
-        Mis Mascotas
+      <ion-button class="category-button" color="primary" title="Salud">
+        <ion-icon name="fitness-outline" slot="icon-only"></ion-icon>
       </ion-button>
-      <ion-button class="category-button" color="tertiary">
-        <ion-icon name="calendar-number-outline"></ion-icon>
-        <ion-icon src="assets/icon/calendar-number-outline.svg"></ion-icon>
-        Citas 
+      <ion-button class="category-button" color="tertiary" title="Agenda">
+        <ion-icon name="calendar-number-outline" slot="icon-only"></ion-icon>
       </ion-button>
-      <ion-button class="category-button" color="success">
-        <ion-icon name="person-outline"></ion-icon>
-        <ion-icon src="assets/icon/person-outline.svg"></ion-icon>
-        Veterinarios
+      <ion-button class="category-button" color="success"title="veterinarios">
+        <ion-icon name="person-outline" slot="icon-only"></ion-icon>
       </ion-button>
-      <ion-button class="category-button" color="warning">
-        <ion-icon name="fitness-outline"></ion-icon>
-        <ion-icon src="assets/icon/receipt-outline.svg"></ion-icon>
-         Consejos
+      <ion-button class="category-button" color="warning" title="Cosejos">
+        <ion-icon name="fitness-outline" slot="icon-only"></ion-icon>
       </ion-button>
     </div>
   </div>
