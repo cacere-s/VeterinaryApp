@@ -1,21 +1,44 @@
-/* En tu archivo .scss */
-background-color {
-  background-color: #da8ff6;
-  color: black;
-}
+// /* En tu archivo .scss */
+// background-color {
+//   background-color: #da8ff6;
+//   color: black;
+// }
 
-ion-item {
-  border-color: transparent; /* Color por defecto */
-}
+// ion-item {
+//   border-color: transparent; /* Color por defecto */
+// }
 
-ion-item {
-  border-color: red; /* Cuando el campo es inválido */
-}
+// ion-item {
+//   border-color: red; /* Cuando el campo es inválido */
+// }
 
- ion-input {
-   //--background: #ffffff;  /* Cambia el color de fondo */
-   --color: #970505;          /* Cambia el color del texto */
-   --border-color: #080707; 
+//  ion-input {
+//    //--background: #ffffff;  /* Cambia el color de fondo */
+//    --color: #970505;          /* Cambia el color del texto */
+//    --border-color: #080707; 
   
- }
+//  }
 
+    /* Botón principal */
+    .primary-button {
+      --background: #7f3dff; /* Púrpura */
+      --background-hover: #6930c3;
+      --border-radius: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    ion-item {
+      position: relative;
+    }
+    
+    ion-label {
+      transition: all 0.3s ease;
+    }
+    
+    ion-input:focus + ion-label,
+    ion-input:not(:empty) + ion-label {
+      top: -10px;
+      font-size: 0.8em;
+    }
+    
