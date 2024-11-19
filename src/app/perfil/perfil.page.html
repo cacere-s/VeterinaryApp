@@ -1,21 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Perfil de la Mascota</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-card>
-    <img src="assets/imagenes/perfildemascotas.jpg" alt="Foto de la Mascota" />
-    <ion-card-header>
-      <ion-card-title>{{ mascota.name }}</ion-card-title>
-      <ion-card-subtitle>{{ mascota.raza }}</ion-card-subtitle>
+  <ion-header>
+    <img class="img-mascota" src="assets/imagenes/perfildemascotas.jpg" alt="Foto de la Mascota" />
+  </ion-header>
+  <ion-card class="info-card">
+    <ion-card-header class="info-header font-header">
+      <ion-card-title style=" font-size: 3rem; padding: 0; font-weight: bold">{{ mascota.name }}</ion-card-title>
+      <ion-card-subtitle style=" font-size: 1.5rem; color: #A259FF; margin: 0;">{{ mascota.raza }}</ion-card-subtitle>
     </ion-card-header>
-    <ion-card-content>
-      <p><strong>Ege:</strong> {{ mascota.age }} años</p>
-      <p><strong>Gender:</strong> {{ mascota.gender }} </p>
-      <p><strong>Weight:</strong> {{ mascota.weight }} kg</p>
+    <ion-card-content class="info-content font">
+      <p class="info-card-content info-card-text-header">Age<strong class="info-card-text">{{ mascota.age }}
+          años</strong></p>
+      <p class="info-card-content info-card-text-header">Gender<strong class="info-card-text" style="color: #f13376">{{
+          mascota.gender }} </strong></p>
+      <p class="info-card-content info-card-text-header">Weight<strong class="info-card-text">{{ mascota.weight }}
+        </strong></p>
     </ion-card-content>
-  </ion-card>
+    </ion-card>
 </ion-content>
-
