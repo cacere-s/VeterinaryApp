@@ -18,6 +18,18 @@ const routes: Routes = [
   {
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
+  },
+  {
+    path: 'veterinarios',
+    loadChildren: () => import('./veterinarios/veterinarios.module').then( m => m.VeterinariosPageModule)
+  },
+  {
+    path: 'citas',
+    loadChildren: () => import('./citas/citas.module').then( m => m.CitasPageModule)
+  },
+  {
+    path: 'recomendaciones',
+    loadChildren: () => import('./recomendaciones/recomendaciones.module').then( m => m.RecomendacionesPageModule)
   }
 ];
 
