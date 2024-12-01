@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Programar Cita</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Agendar Cita</ion-card-title>
+            <ion-card-subtitle>Selecciona un veterinario, fecha y hora</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <form (ngSubmit)="agendarCita()">
+              <ion-item>
+                <ion-label>Veterinario</ion-label>
+                <ion-select [(ngModel)]="cita.veterinario" name="veterinario">
+                  <ion-select-option *ngFor="let vet of veterinarios" [value]="vet.nombre">
+                    {{ vet.nombre }} - {{ vet.especialidad }}
+                  </ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <!-- Selección de fecha -->
+              <ion-item>
+                <ion-label>Fecha</ion-label>
+                <ion-datetime
+                  display-format="DD MMM YYYY"
+                  picker-format="DD MMM YYYY"
+                  [(ngModel)]="cita.fecha"
+                  name="fecha">
+                </ion-datetime>
+              </ion-item>
+
+              <!-- Selección de hora (Formato militar 24h de 06:00 a 19:00) -->
+              <ion-item>
+                <ion-label>Hora</ion-label>
+                <ion-datetime
+                  display-format="HH:mm"
+                  picker-format="HH:mm"
+                  [(ngModel)]="cita.hora"
+                  name="hora"
+                  presentation="time"
+                  [minuteValues]="'0'"
+                  [hourValues]="['06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19']">
+                </ion-datetime>
+              </ion-item>
+
+              <ion-button expand="full" type="submit" color="primary">Agendar Cita</ion-button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
